@@ -197,7 +197,7 @@
 
 **Closed issues:**
 
-- \[Carthage\] Missing required module 'libcmark' [\#120](https://github.com/johnxnguyen/Down/issues/120)
+- \[Carthage\] Missing required module 'cmark' [\#120](https://github.com/johnxnguyen/Down/issues/120)
 
 **Merged pull requests:**
 
@@ -308,7 +308,7 @@
 
 **Closed issues:**
 
-- Cocoapods: libcmark [\#124](https://github.com/johnxnguyen/Down/issues/124)
+- Cocoapods: cmark [\#124](https://github.com/johnxnguyen/Down/issues/124)
 - Use with storyboards [\#123](https://github.com/johnxnguyen/Down/issues/123)
 - support for audio markdown? [\#122](https://github.com/johnxnguyen/Down/issues/122)
 - \[Down\] Can't render toAttributedString while app is in background [\#116](https://github.com/johnxnguyen/Down/issues/116)
@@ -473,7 +473,7 @@
 
 **Closed issues:**
 
-- Carthage install fails: no such module 'libcmark' [\#43](https://github.com/johnxnguyen/Down/issues/43)
+- Carthage install fails: no such module 'cmark' [\#43](https://github.com/johnxnguyen/Down/issues/43)
 - Xcode 8.3 warnings [\#26](https://github.com/johnxnguyen/Down/issues/26)
 
 **Merged pull requests:**

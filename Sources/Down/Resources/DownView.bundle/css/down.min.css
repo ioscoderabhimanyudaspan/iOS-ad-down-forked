@@ -1,8 +1,668 @@
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/*  ============================================================================
+   MARKDOWN CONTENT STYLES
+   This stylesheet provides comprehensive styling for markdown-rendered content
+   with support for both light and dark themes using CSS custom properties
+   ============================================================================
+  
+  ============================================================================
+   WKWebView Horizontal Padding & Overflow Fix
+   Ensures zero horizontal padding/margin inside iOS WKWebView
+   ============================================================================  */
+  
+.markdown-body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+  
+  
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('../fonts/OpenSauceOne-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('../fonts/OpenSauceOne-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('../fonts/OpenSauceOne-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('../fonts/OpenSauceOne-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('../fonts/OpenSauceOne-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('../fonts/OpenSauceOne-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+  
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('../fonts/OpenSauceOne-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Open Sauce One';
+    src: url('../fonts/OpenSauceOne-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+  
+   
+ 
+:root {
+      Theme colors
+    --body-bg: #fff;
+    --pure-white: #ffffff;
+    --pure-black: #0b0b0c;
+    --pure-darkGray: #121316;
+    --pure-none: #ffffff00;
+    --neutralBlue-1000: #121721;
+    --neutralBlue-900: #3d485c;
+    --neutralBlue-800: #576175;
+    --neutralBlue-700: #7b869d;
+    --neutralBlue-600: #98a1b3;
+    --neutralBlue-500: #b2bbcc;
+    --neutralBlue-400: #cfd6e2;
+    --neutralBlue-300: #dee3ed;
+    --neutralBlue-200: #ebeef4;
+    --neutralBlue-100: #f2f4f8;
+}
+  
+body {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+      
+    margin: 0 !important;
+    padding: 0 !important;
+      
+    font-size: 15px;
+    line-height: 1.6em;
+      
+    -webkit-text-size-adjust: 100%;
+      
+    background-color: var(--body-bg);
+    color: var(--neutralBlue-1000);
+      
+    font-family: 'Open Sauce One', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+      
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+  
+.dark {
+    color: var(--neutralGray-200);
+}
 
-/* Modified version of github.com/sindresorhus/github-markdown-css | MIT License */
-/* Unminify it @ unminify.com */
-hr,img{box-sizing:content-box}body:after,body:before,hr::after,hr::before{display:table;content:""}a,a:not([href]){text-decoration:none}blockquote,h6{color:#777}hr,svg:not(:root){overflow:hidden}dl,dl dt,hr,td,th{padding:0}img,table tr{background-color:#fff}pre,pre code{word-wrap:normal}body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#333;font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:1.5em;line-height:1.6;word-wrap:break-word;padding:2rem}a{background-color:transparent;-webkit-text-decoration-skip:objects;color:#4078c0}a:active,a:hover{outline-width:0;text-decoration:underline}strong{font-weight:bolder}h1{margin:.67em 0}img{border-style:none;max-width:100%}h1,h2{padding-bottom:.3em;border-bottom:1px solid #eee}input{margin:0;overflow:visible;font:13px/1.4 Helvetica,arial,nimbussansl,liberationsans,freesans,clean,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}[type=checkbox]{box-sizing:border-box;padding:0}table{border-spacing:0;border-collapse:collapse;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}*{box-sizing:border-box}body:after,hr::after{clear:both}blockquote{margin:0;padding:0 15px;border-left:4px solid #ddd}ol ol,ul ol{list-style-type:lower-roman}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-alpha}dd{margin-left:0}code,pre{font:.9em Consolas,"Liberation Mono",Menlo,Courier,monospace}dl dt,table th{font-weight:700}body>:first-child{margin-top:0!important}dl dt,li>p{margin-top:16px}body>:last-child{margin-bottom:0!important}a:not([href]){color:inherit}h1,h2,h3,h4,h5,h6{margin-top:1em;margin-bottom:16px;font-weight:700;line-height:1.4}h1{font-size:2.25em;line-height:1.2}h2{font-size:1.75em;line-height:1.225}h3{font-size:1.5em;line-height:1.43}h4{font-size:1.25em}dl dt,h5,h6{font-size:1em}blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}hr{background:#e7e7e7;height:4px;margin:16px 0;border:0}ol,ul{padding-left:2em}ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}dl dt{font-style:italic}dl dd{padding:0 16px;margin-bottom:16px}blockquote>:first-child{margin-top:0}blockquote>:last-child{margin-bottom:0}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{border-top:1px solid #ccc}table tr:nth-child(2n){background-color:#f8f8f8}code{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}pre code,pre>code{padding:0;margin:0;border:0}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre>code{font-size:100%;word-break:normal;white-space:pre;background:0 0}pre code{display:inline;max-width:initial;overflow:initial;line-height:inherit;background-color:transparent}pre code:after,pre code:before{content:normal}kbd{display:inline-block;padding:3px 5px;font:11px Consolas,"Liberation Mono",Menlo,Courier,monospace;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}:checked+.radio-label{position:relative;z-index:1;border-color:#4078c0}hr{border-bottom-color:#eee}
+h1 {
+    font-family: 'Open Sauce One', sans-serif;
+    font-weight: 800;
+    color: var(--neutralBlue-1000);
+    font-size: 1.6em;
+    line-height: 1.4em;
+    margin-bottom: 0.25em;
+    letter-spacing: -0.02em;
+}
+  
+.dark h1 {
+    color: var(--neutralBlue-100);
+}
+  
+h2 {
+    font-family: 'Open Sauce One', sans-serif;
+    font-weight: 700;
+    color: var(--neutralBlue-1000);
+    font-size: 1.4em;
+    line-height: 1.5em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.02em;
+}
+  
+.dark h2 {
+    color: var(--neutralBlue-100);
+}
+  
+h3 {
+    font-family: 'Open Sauce One', sans-serif;
+    font-weight: 700;
+    color: var(--neutralBlue-1000);
+    font-size: 1.15em;
+    line-height: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.01em;
+}
+  
+.dark h3 {
+    color: var(--neutralBlue-100);
+}
+  
+h4 {
+    font-family: 'Open Sauce One', sans-serif;
+    font-weight: 600;
+    color: var(--neutralBlue-1000);
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.01em;
+}
+  
+.dark h4 {
+    color: var(--neutralBlue-100);
+}
+  
+h5 {
+    font-family: 'Open Sauce One', sans-serif;
+    font-weight: 600;
+    color: var(--neutralBlue-1000);
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.01em;
+}
+  
+.dark h5 {
+    color: var(--neutralBlue-100);
+}
+  
+h6 {
+    font-family: 'Open Sauce One', sans-serif;
+    font-weight: 500;
+    color: var(--neutralBlue-1000);
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
+    letter-spacing: -0.01em;
+}
+  
+.dark h6 {
+    color: var(--neutralBlue-100);
+}
+  
+  
+h1:has(+ h2),
+h1:has(+ h3),
+h1:has(+ h4),
+h1:has(+ h5),
+h1:has(+ h6),
+h2:has(+ h3),
+h2:has(+ h4),
+h2:has(+ h5),
+h2:has(+ h6),
+h3:has(+ h4),
+h3:has(+ h5),
+h3:has(+ h6),
+h4:has(+ h5),
+h4:has(+ h6),
+h5:has(+ h6) {
+    margin-bottom: 1em;
+}
+  
+h2:has(+ p),
+h3:has(+ p),
+h4:has(+ p),
+h5:has(+ p),
+h6:has(+ p) {
+    margin-bottom: 0.4em;
+}
+  
+h2:has(+ ul),
+h3:has(+ ul),
+h4:has(+ ul),
+h5:has(+ ul),
+h6:has(+ ul),
+h2:has(+ ol),
+h3:has(+ ol),
+h4:has(+ ol),
+h5:has(+ ol),
+h6:has(+ ol) {
+    margin-bottom: 0.6em;
+}
+  
+h2:has(+ .markdown-table-container),
+h3:has(+ .markdown-table-container),
+h4:has(+ .markdown-table-container),
+h5:has(+ .markdown-table-container),
+h6:has(+ .markdown-table-container) {
+    margin-bottom: 1.2em;
+}
+  
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+    font-weight: inherit;
+}
+  
 
-/*! highlightjs */
-.hljs{display:block;overflow-x:auto;padding:.5em;background:#1d1f21;color:#c5c8c6}.hljs span::selection,.hljs::selection{background:#373b41}.hljs span::-moz-selection,.hljs::-moz-selection{background:#373b41}.hljs-name,.hljs-title{color:#f0c674}.hljs-comment,.hljs-meta,.hljs-meta .hljs-keyword{color:#707880}.hljs-deletion,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol{color:#c66}.hljs-addition,.hljs-doctag,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-string{color:#b5bd68}.hljs-attribute,.hljs-code,.hljs-selector-id{color:#b294bb}.hljs-bullet,.hljs-keyword,.hljs-selector-tag,.hljs-tag{color:#81a2be}.hljs-subst,.hljs-template-tag,.hljs-template-variable,.hljs-variable{color:#8abeb7}.hljs-built_in,.hljs-builtin-name,.hljs-quote,.hljs-section,.hljs-selector-class,.hljs-type{color:#de935f}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+p {
+    margin-bottom: 0.6em;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: manual;
+    line-height: 1.8em;
+}
+  
+p:has(+ ul),
+p:has(+ ol) {
+    margin-bottom: 0.3em;
+}
+  
+p:has(strong):has(+ p) {
+    margin-bottom: 0.6em;
+}
+  
+p:has(+ h1),
+p:has(+ h2),
+p:has(+ h3),
+p:has(+ h4),
+p:has(+ h5),
+p:has(+ h6) {
+    margin-bottom: 1.5em;
+}
+  
+h1:has(+ pre),
+h2:has(+ pre),
+h3:has(+ pre),
+h4:has(+ pre),
+h5:has(+ pre),
+h6:has(+ pre) {
+    margin-bottom: 1em;
+}
+  
+
+b,
+strong {
+    font-family: 'Open Sauce One', sans-serif;
+    font-weight: 500;
+}
+  
+i,
+em {
+    font-family: 'Open Sauce One', sans-serif;
+    font-style: italic;
+}
+  
+u {
+    text-decoration: none;   Remove default underline
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        var(--neutralBlue-900) 50%
+    );
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 1.05em;
+}
+  
+.dark u {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 50%,
+        var(--neutralGray-200) 50%
+    );
+}
+  
+s {
+    color: var(--neutralBlue-900);
+}
+  
+.dark s {
+    color: var(--neutralGray-200);
+}
+
+a {
+    color: var(--neutralBlue-900);
+    font-size: 0.875rem;
+    padding: 0.25rem 0.425rem;
+    text-decoration: none;
+    border-radius: 2.125rem;
+    margin: 0 0.2em;
+    background: transparent;
+    list-style-type: none;
+    border: 1px solid var(--neutralBlue-300);
+    font-family: 'Open Sauce One', sans-serif;
+}
+  
+.dark a {
+    color: var(--neutralGray-200);
+    border: 1px solid var(--neutralGray-700);
+}
+  
+a:hover {
+    background: var(--neutralBlue-100);
+}
+  
+.dark a:hover {
+    background: var(--neutralGray-800);
+}
+  
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+blockquote {
+    display: block;
+    margin-left: -1em;
+    padding-left: 0.8em;
+    border-left: 0.2em solid var(--neutralBlue-900);
+    background-color: transparent;
+}
+  
+.dark blockquote {
+    border-left: 0.2em solid var(--neutralGray-200);
+}
+
+li {
+    line-height: 1.8em;
+}
+  
+ul li {
+    margin-left: 0.0em !important;
+    padding-left: 0 !important;
+      
+    margin-bottom: 0.4em;
+}
+  
+ul > li {
+    list-style-type: disc;
+}
+  
+ul ul li {
+    list-style-type: circle;
+}
+  
+ul ul li,
+ul ol li,
+ol ul li,
+ol ol li {
+    margin-left: 0.0em !important;
+    padding-left: 0 !important;
+  
+      
+    margin-bottom: 0.6em;
+}
+  
+ul li p {
+    margin-bottom: 0em;
+}
+  
+ul li:before {
+    color: var(--neutralBlue-900);
+    display: inline-block;
+    font-size: 1.5em;
+}
+  
+.dark ul li:before {
+    color: var(--neutralGray-200);
+}
+  
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+    margin-left: 0.0em !important;
+    padding-left: 0 !important;
+  
+    margin-top: 0.3em;
+}
+  
+ul,
+ol {
+    margin-bottom: 1.5em;
+}
+  
+ul:has(+ p),
+ol:has(+ p) {
+    margin-bottom: 0.3em;
+}
+  
+ol li p {
+    display: inline;
+}
+  
+ol {
+    counter-reset: item;
+    list-style: none;
+}
+  
+ol li {
+    position: relative;
+    margin-left: 0.0em !important;
+    padding-left: 0 !important;
+      
+    margin-bottom: 0.8em;
+}
+  
+ol > li {
+    list-style-type: decimal;
+}
+  
+ol > li::before {
+    color: var(--neutralBlue-900);
+    font-size: inherit;
+    font-weight: inherit;
+}
+  
+.dark ol > li::before {
+    color: var(--neutralGray-200);
+}
+  
+ol ol > li::before,
+ol ul > li::before {
+    color: var(--neutralBlue-900);
+    padding-right: 0.4em;
+    font-size: inherit;
+    font-weight: inherit;
+}
+  
+.dark ol ol > li::before,
+.dark ol ul > li::before {
+    color: var(--neutralGray-200);
+}
+  
+
+pre {
+    display: block;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+  
+p + pre {
+    margin-top: 0.8em;
+    margin-bottom: 1em;
+}
+  
+pre + p {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+}
+  
+pre:has(+ p) {
+    margin-bottom: 0.4em;
+}
+  
+pre:has(+ h1),
+pre:has(+ h2),
+pre:has(+ h3),
+pre:has(+ h4),
+pre:has(+ h5),
+pre:has(+ h6) {
+    margin-bottom: 2.6em;
+}
+  
+pre code {
+    display: block;
+    font-family: "Fira Mono", monospace;
+    font-size: 0.9em;
+    width: 100%;
+    line-height: 1.45em;
+    border-radius: 0.5em;
+    margin: 1em 0 1.8em 0;
+}
+.markdown-table-container {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    overflow-x: auto;
+    outline: 0.5px solid var(--neutralBlue-300);
+    border-radius: 1em;
+}
+  
+.dark .markdown-table-container {
+    outline: 0.5px solid var(--neutralGray-700);
+}
+  
+table {
+    box-sizing: border-box;
+    border-collapse: collapse;
+    border-radius: 1em;
+    width: 100%;
+}
+  
+table tr {
+    color: var(--neutralBlue-900);
+}
+  
+.dark table tr {
+    color: var(--neutralGray-200);
+}
+  
+table th {
+    font-weight: 700;
+    background-color: var(--neutralBlue-100);
+    color: var(--neutralBlue-1000);
+}
+     
+.dark table th {
+    background-color: var(--neutralGray-1000);
+    color: var(--neutralBlue-100);
+}
+  
+  
+table th strong {
+    font-weight: inherit;
+}
+  
+table td {
+    background-color: transparent;
+}
+  
+ 
+table td,
+table th {
+    width: auto;
+    min-width: 8em;
+    vertical-align: top;
+    padding: 0.8em 1.5em;
+    border-right: 0.5px solid var(--neutralBlue-300);
+    border-bottom: 0.5px solid var(--neutralBlue-300);
+    font-size: 0.95em;
+}
+  
+.dark table td,
+.dark table th {
+    border-right: 0.5px solid var(--neutralGray-700);
+    border-bottom: 0.5px solid var(--neutralGray-700);
+}
+  
+
+table td:last-child,
+table th:last-child {
+    border-right: 0px solid var(--neutralBlue-300);
+}
+  
+.dark table td:last-child,
+.dark table th:last-child {
+    border-right: 0px solid var(--neutralGray-700);
+}
+  
+thead tr {
+    border-bottom: 0.5px solid var(--neutralBlue-300);
+    border-collapse: collapse;
+    text-align: left;
+}
+  
+.dark thead tr {
+    border-bottom: 0.5px solid var(--neutralGray-700);
+}
+  
+table tbody tr:last-child td {
+    border-bottom: 0px solid var(--neutralBlue-300);
+}
+  
+.dark table tbody tr:last-child td {
+    border-bottom: 0px solid var(--neutralGray-700);
+}
+  
+/*   ============================================================================
+   HORIZONTAL RULE STYLING
+   Section dividers with conditional spacing
+   ============================================================================  */
+  
+hr {
+    border: 0;
+    border-top: 0.5px solid var(--neutralBlue-300);
+    margin: 2em 0;
+    height: 0px;
+}
+  
+.dark hr {
+    border-top: 0.5px solid var(--neutralGray-700);
+}
+  
+pre:has(+ hr) {
+    margin-bottom: 0;
+}
+  
+hr + pre {
+    margin-top: 0;
+}
+  
+ /* ============================================================================
+   MATH EXPRESSION STYLING
+   KaTeX mathematical notation support
+   ============================================================================ */
+  
+.katex {
+    margin: 0em 0.3em;
+}

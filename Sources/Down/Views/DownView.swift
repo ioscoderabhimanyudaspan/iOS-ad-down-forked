@@ -47,7 +47,8 @@ open class DownView: WKWebView {
                 writableBundle: Bool = false,
                 configuration: WKWebViewConfiguration? = nil,
                 options: DownOptions = .default,
-                didLoadSuccessfully: DownViewClosure? = nil) throws {
+                didLoadSuccessfully: DownViewClosure? = nil,
+                customThemeBundleName:String = "DownView") throws {
 
         self.options = options
         self.didLoadSuccessfully = didLoadSuccessfully
@@ -57,7 +58,7 @@ open class DownView: WKWebView {
             self.bundle = templateBundle
         } else {
             let moduleBundle = Bundle.moduleBundle ?? Bundle(for: DownView.self)
-            let url = moduleBundle.url(forResource: "DownView", withExtension: "bundle")!
+            let url = moduleBundle.url(forResource: customThemeBundleName, withExtension: "bundle")!
             self.bundle = Bundle(url: url)!
         }
 
@@ -123,8 +124,7 @@ open class DownView: WKWebView {
     #if os(macOS)
     private var temporaryDirectoryURL: URL?
     #endif
-
-    private var didLoadSuccessfully: DownViewClosure?
+    public var didLoadSuccessfully: DownViewClosure?
 
 }
 
