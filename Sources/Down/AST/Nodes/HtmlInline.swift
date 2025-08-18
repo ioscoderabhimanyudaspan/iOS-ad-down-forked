@@ -14,7 +14,7 @@ public class HtmlInline: BaseNode {
 
     /// The html tag, if present.
 
-    public private(set) lazy var literal: String? = cmarkNode.literal
+    public private(set) lazy var literalDown: String? = cmarkNode.literalDown
 
 }
 
@@ -23,7 +23,7 @@ public class HtmlInline: BaseNode {
 extension HtmlInline: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Html Inline - \(literal ?? "nil")"
+        return "Html Inline - \(literalDown ?? "nil")"
     }
 
 }

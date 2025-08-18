@@ -16,7 +16,7 @@ public protocol ListItemPrefixGenerator {
 
 public extension ListItemPrefixGenerator {
     init(list: List) {
-        self.init(listType: list.listType, numberOfItems: list.numberOfItems, nestDepth: list.nestDepth)
+        self.init(listType: list.listTypeDown, numberOfItems: list.numberOfItems, nestDepth: list.nestDepth)
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  LineBreak.swift
+//  SoftBreak.swift
 //  Down
 //
 //  Created by John Nguyen on 09.04.19.
@@ -8,14 +8,14 @@
 import Foundation
 import cmark_gfm
 
-public class LineBreak: BaseNode {}
+public class DownSoftBreak: BaseNode {}
 
 // MARK: - Debug
 
-extension LineBreak: CustomDebugStringConvertible {
+extension DownSoftBreak: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Line Break"
+        return "Soft Break"
     }
 
 }

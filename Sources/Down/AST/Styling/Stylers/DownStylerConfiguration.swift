@@ -21,7 +21,7 @@ public struct DownStylerConfiguration {
     public var listItemOptions: ListItemOptions
     public var quoteStripeOptions: QuoteStripeOptions
     public var thematicBreakOptions: ThematicBreakOptions
-    public var codeBlockOptions: CodeBlockOptions
+    public var codeBlockOptions: DownCodeBlockOptions
 
     // MARK: - Life cycle
 
@@ -31,7 +31,7 @@ public struct DownStylerConfiguration {
                 listItemOptions: ListItemOptions = ListItemOptions(),
                 quoteStripeOptions: QuoteStripeOptions = QuoteStripeOptions(),
                 thematicBreakOptions: ThematicBreakOptions = ThematicBreakOptions(),
-                codeBlockOptions: CodeBlockOptions = CodeBlockOptions()
+                codeBlockOptions: DownCodeBlockOptions = DownCodeBlockOptions()
     ) {
         self.fonts = fonts
         self.colors = colors

@@ -1,5 +1,5 @@
 //
-//  Strong.swift
+//  LineBreak.swift
 //  Down
 //
 //  Created by John Nguyen on 09.04.19.
@@ -8,14 +8,14 @@
 import Foundation
 import cmark_gfm
 
-public class Strong: BaseNode {}
+public class DownLineBreak: BaseNode {}
 
 // MARK: - Debug
 
-extension Strong: CustomDebugStringConvertible {
+extension DownLineBreak: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Strong"
+        return "Line Break"
     }
 
 }

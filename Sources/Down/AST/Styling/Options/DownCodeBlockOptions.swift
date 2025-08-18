@@ -18,7 +18,7 @@ import AppKit
 
 #endif
 
-public struct CodeBlockOptions {
+public struct DownCodeBlockOptions {
 
     // MARK: - Properties
 

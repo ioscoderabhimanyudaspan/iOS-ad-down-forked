@@ -14,7 +14,7 @@ public class HtmlBlock: BaseNode {
 
     /// The html content, if present.
 
-    public private(set) lazy var literal: String? = cmarkNode.literal
+    public private(set) lazy var literalDown: String? = cmarkNode.literalDown
 
 }
 
@@ -23,7 +23,7 @@ public class HtmlBlock: BaseNode {
 extension HtmlBlock: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        let content = (literal ?? "nil").replacingOccurrences(of: "\n", with: "\\n")
+        let content = (literalDown ?? "nil").replacingOccurrences(of: "\n", with: "\\n")
         return "Html Block - content: \(content)"
     }
 

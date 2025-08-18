@@ -1,5 +1,5 @@
 //
-//  Emphasis.swift
+//  BlockQuote.swift
 //  Down
 //
 //  Created by John Nguyen on 09.04.19.
@@ -8,14 +8,14 @@
 import Foundation
 import cmark_gfm
 
-public class Emphasis: BaseNode {}
+public class DownBlockQuote: BaseNode {}
 
 // MARK: - Debug
 
-extension Emphasis: CustomDebugStringConvertible {
+extension DownBlockQuote: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Emphasis"
+        return "Block Quote"
     }
 
 }

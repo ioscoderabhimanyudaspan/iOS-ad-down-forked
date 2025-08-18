@@ -1,5 +1,5 @@
 //
-//  SoftBreak.swift
+//  Emphasis.swift
 //  Down
 //
 //  Created by John Nguyen on 09.04.19.
@@ -8,14 +8,14 @@
 import Foundation
 import cmark_gfm
 
-public class SoftBreak: BaseNode {}
+public class DownEmphasis: BaseNode {}
 
 // MARK: - Debug
 
-extension SoftBreak: CustomDebugStringConvertible {
+extension DownEmphasis: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Soft Break"
+        return "Emphasis"
     }
 
 }

@@ -46,7 +46,7 @@ public class DebugVisitor: Visitor {
         return reportWithChildren(node)
     }
 
-    public func visit(blockQuote node: BlockQuote) -> String {
+    public func visit(blockQuote node: DownBlockQuote) -> String {
         return reportWithChildren(node)
     }
 
@@ -58,7 +58,7 @@ public class DebugVisitor: Visitor {
         return reportWithChildren(node)
     }
 
-    public func visit(codeBlock node: CodeBlock) -> String {
+    public func visit(codeBlock node: DownCodeBlock) -> String {
         return reportWithChildren(node)
     }
 
@@ -70,31 +70,31 @@ public class DebugVisitor: Visitor {
         return reportWithChildren(node)
     }
 
-    public func visit(paragraph node: Paragraph) -> String {
+    public func visit(paragraph node: DownParagraph) -> String {
         return reportWithChildren(node)
     }
 
-    public func visit(heading node: Heading) -> String {
+    public func visit(heading node: DownHeading) -> String {
         return reportWithChildren(node)
     }
 
-    public func visit(thematicBreak node: ThematicBreak) -> String {
+    public func visit(thematicBreak node: DownThematicBreak) -> String {
         return report(node)
     }
 
-    public func visit(text node: Text) -> String {
+    public func visit(text node: DownText) -> String {
         return report(node)
     }
 
-    public func visit(softBreak node: SoftBreak) -> String {
+    public func visit(softBreak node: DownSoftBreak) -> String {
         return report(node)
     }
 
-    public func visit(lineBreak node: LineBreak) -> String {
+    public func visit(lineBreak node:  DownLineBreak) -> String {
         return report(node)
     }
 
-    public func visit(code node: Code) -> String {
+    public func visit(code node:  DownCode) -> String {
         return report(node)
     }
 
@@ -106,11 +106,11 @@ public class DebugVisitor: Visitor {
         return report(node)
     }
 
-    public func visit(emphasis node: Emphasis) -> String {
+    public func visit(emphasis node:  DownEmphasis) -> String {
         return reportWithChildren(node)
     }
 
-    public func visit(strong node: Strong) -> String {
+    public func visit(strong node:  DownStrong) -> String {
         return reportWithChildren(node)
     }
 
@@ -118,7 +118,7 @@ public class DebugVisitor: Visitor {
         return reportWithChildren(node)
     }
 
-    public func visit(image node: Image) -> String {
+    public func visit(image node: DownImage) -> String {
         return reportWithChildren(node)
     }
 

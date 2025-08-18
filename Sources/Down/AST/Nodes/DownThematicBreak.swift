@@ -1,5 +1,5 @@
 //
-//  BlockQuote.swift
+//  ThematicBreak.swift
 //  Down
 //
 //  Created by John Nguyen on 09.04.19.
@@ -8,14 +8,14 @@
 import Foundation
 import cmark_gfm
 
-public class BlockQuote: BaseNode {}
+public class DownThematicBreak: BaseNode {}
 
 // MARK: - Debug
 
-extension BlockQuote: CustomDebugStringConvertible {
+extension DownThematicBreak: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Block Quote"
+        return "Thematic Break"
     }
 
 }

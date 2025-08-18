@@ -14,7 +14,7 @@ public class CustomBlock: BaseNode {
 
     /// The custom content, if present.
 
-    public private(set) lazy var literal: String? = cmarkNode.literal
+    public private(set) lazy var literalDown: String? = cmarkNode.literalDown
 
 }
 
@@ -23,7 +23,7 @@ public class CustomBlock: BaseNode {
 extension CustomBlock: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Custom Block - \(literal ?? "nil")"
+        return "Custom Block - \(literalDown ?? "nil")"
     }
 
 }

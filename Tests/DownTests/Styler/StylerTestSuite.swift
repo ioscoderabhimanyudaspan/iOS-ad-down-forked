@@ -123,19 +123,19 @@ private extension DownStylerConfiguration {
         fonts.listItemPrefix = .monospacedDigitSystemFont(ofSize: 17, weight: .regular)
 
         var colors = StaticColorCollection()
-        colors.heading1 = #colorLiteral(red: 0.7803921569, green: 0, blue: 0.2235294118, alpha: 1)
-        colors.heading2 = #colorLiteral(red: 1, green: 0.3411764706, blue: 0.2, alpha: 1)
-        colors.heading3 = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.05882352941, alpha: 1)
-        colors.heading4 = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.05882352941, alpha: 1)
-        colors.heading5 = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.05882352941, alpha: 1)
-        colors.heading6 = #colorLiteral(red: 1, green: 0.7647058824, blue: 0.05882352941, alpha: 1)
+        colors.heading1 = #colorliteralDown(red: 0.7803921569, green: 0, blue: 0.2235294118, alpha: 1)
+        colors.heading2 = #colorliteralDown(red: 1, green: 0.3411764706, blue: 0.2, alpha: 1)
+        colors.heading3 = #colorliteralDown(red: 1, green: 0.7647058824, blue: 0.05882352941, alpha: 1)
+        colors.heading4 = #colorliteralDown(red: 1, green: 0.7647058824, blue: 0.05882352941, alpha: 1)
+        colors.heading5 = #colorliteralDown(red: 1, green: 0.7647058824, blue: 0.05882352941, alpha: 1)
+        colors.heading6 = #colorliteralDown(red: 1, green: 0.7647058824, blue: 0.05882352941, alpha: 1)
         colors.body = .black
         colors.code = .darkGray
-        colors.codeBlockBackground = #colorLiteral(red: 0.9647058824, green: 0.9725490196, blue: 0.9803921569, alpha: 1)
-        colors.link = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        colors.codeBlockBackground = #colorliteralDown(red: 0.9647058824, green: 0.9725490196, blue: 0.9803921569, alpha: 1)
+        colors.link = #colorliteralDown(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
         colors.quote = .lightGray
-        colors.quoteStripe = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        colors.thematicBreak = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        colors.quoteStripe = #colorliteralDown(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        colors.thematicBreak = #colorliteralDown(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         colors.listItemPrefix = .gray
 
         var paragraphStyles = StaticParagraphStyleCollection()

@@ -8,22 +8,22 @@
 import Foundation
 import cmark_gfm
 
-public class Text: BaseNode {
+public class DownText: BaseNode {
 
     // MARK: - Properties
 
     /// The text content, if present.
 
-    public private(set) lazy var literal: String? = cmarkNode.literal
+    public private(set) lazy var literalDown: String? = cmarkNode.literalDown
 
 }
 
 // MARK: - Debug
 
-extension Text: CustomDebugStringConvertible {
+extension DownText: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Text - \(literal ?? "nil")"
+        return "Text - \(literalDown ?? "nil")"
     }
 
 }

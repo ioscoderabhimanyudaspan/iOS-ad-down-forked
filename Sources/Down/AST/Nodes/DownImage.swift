@@ -8,14 +8,14 @@
 import Foundation
 import cmark_gfm
 
-public class Image: BaseNode {
+public class DownImage: BaseNode {
 
     // MARK: - Properties
 
     /// The title of the image, if present.
     ///
     /// In the example below, the first line is a reference link, with the reference at the
-    /// bottom. `<text>` is literal text belonging to children nodes. The title occurs
+    /// bottom. `<text>` is literalDown text belonging to children nodes. The title occurs
     /// after the url and is optional.
     ///
     /// ```
@@ -34,13 +34,13 @@ public class Image: BaseNode {
     /// ![<text>](<url>)
     /// ```
 
-    public private(set) lazy var url: String? = cmarkNode.url
+    public private(set) lazy var url: String? = cmarkNode.urlDown
 
 }
 
 // MARK: - Debug
 
-extension Image: CustomDebugStringConvertible {
+extension DownImage: CustomDebugStringConvertible {
 
     public var debugDescription: String {
         return "Image - title: \(title ?? "nil"), url: \(url ?? "nil"))"

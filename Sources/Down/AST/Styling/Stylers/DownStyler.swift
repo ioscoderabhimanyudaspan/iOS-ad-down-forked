@@ -32,7 +32,7 @@ open class DownStyler: Styler {
 
     public let quoteStripeOptions: QuoteStripeOptions
     public let thematicBreakOptions: ThematicBreakOptions
-    public let codeBlockOptions: CodeBlockOptions
+    public let codeBlockOptions: DownCodeBlockOptions
 
     private let itemParagraphStyler: ListItemParagraphStyler
 

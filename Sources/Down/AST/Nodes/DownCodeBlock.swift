@@ -8,13 +8,13 @@
 import Foundation
 import cmark_gfm
 
-public class CodeBlock: BaseNode {
+public class DownCodeBlock: BaseNode {
 
     // MARK: - Properties
 
     /// The code content, if present.
 
-    public private(set) lazy var literal: String? = cmarkNode.literal
+    public private(set) lazy var literalDown: String? = cmarkNode.literalDown
 
     /// The fence info is an optional string that trails the opening sequence of backticks.
     /// It can be used to provide some contextual information about the block, such as
@@ -23,22 +23,22 @@ public class CodeBlock: BaseNode {
     /// For example:
     /// ```
     /// '''<fence info>
-    /// <literal>
+    /// <literalDown>
     /// '''
     /// ```
     ///
 
-    public private(set) lazy var fenceInfo: String? = cmarkNode.fenceInfo
+    public private(set) lazy var fenceInfoDown: String? = cmarkNode.fenceInfoDown
 
 }
 
 // MARK: - Debug
 
-extension CodeBlock: CustomDebugStringConvertible {
+extension DownCodeBlock: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        let content = (literal ?? "nil").replacingOccurrences(of: "\n", with: "\\n")
-        return "Code Block - fenceInfo: \(fenceInfo ?? "nil"), content: \(content)"
+        let content = (literalDown ?? "nil").replacingOccurrences(of: "\n", with: "\\n")
+        return "Code Block - fenceInfo: \(fenceInfoDown ?? "nil"), content: \(content)"
     }
 
 }

@@ -14,7 +14,7 @@ public class List: BaseNode {
 
     /// The type of the list, either bullet or ordered.
 
-    public lazy var listType: ListType = {
+    public lazy var listTypeDown: ListType = {
         guard let type = ListType(cmarkNode: cmarkNode) else {
             assertionFailure("Unsupported or missing list type. Defaulting to .bullet.")
             return .bullet
@@ -73,9 +73,9 @@ public extension List {
         // MARK: - Life cycle
 
         init?(cmarkNode: CMarkNode) {
-            switch cmarkNode.listType {
+            switch cmarkNode.listTypeDown {
             case CMARK_BULLET_LIST: self = .bullet
-            case CMARK_ORDERED_LIST: self = .ordered(start: cmarkNode.listStart)
+            case CMARK_ORDERED_LIST: self = .ordered(start: cmarkNode.listStartDown)
             default: return nil
             }
         }
@@ -88,7 +88,7 @@ public extension List {
 extension List: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        var result = "List - type: \(listType), isTight: \(isTight)"
+        var result = "List - type: \(listTypeDown), isTight: \(isTight)"
         if let delim = delimiter {
             result += ", delimiter: \(delim)"
         }

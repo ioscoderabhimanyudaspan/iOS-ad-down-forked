@@ -15,7 +15,7 @@ public class Link: BaseNode {
     /// The title of the link, if present.
     ///
     /// In the example below, the first line is a reference link, with the reference at the
-    /// bottom. `<text>` is literal text belonging to children nodes. The title occurs
+    /// bottom. `<text>` is literalDown text belonging to children nodes. The title occurs
     /// after the url and is optional.
     ///
     /// ```
@@ -34,7 +34,7 @@ public class Link: BaseNode {
     /// [<text>](<url>)
     /// ```
 
-    public private(set) lazy var url: String? = cmarkNode.url
+    public private(set) lazy var urlDown: String? = cmarkNode.urlDown
 
 }
 
@@ -43,7 +43,7 @@ public class Link: BaseNode {
 extension Link: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Link - title: \(title ?? "nil"), url: \(url ?? "nil"))"
+        return "Link - title: \(title ?? "nil"), url: \(urlDown ?? "nil"))"
     }
 
 }

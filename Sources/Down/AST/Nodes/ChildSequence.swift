@@ -39,7 +39,7 @@ public extension ChildSequence {
             guard let node = node else { return nil }
             defer { self.node = cmark_node_next(node) }
 
-            guard let result = node.wrap() else {
+            guard let result = node.downWrap() else {
                 assertionFailure("Couldn't wrap node of type: \(node.type)")
                 return nil
             }

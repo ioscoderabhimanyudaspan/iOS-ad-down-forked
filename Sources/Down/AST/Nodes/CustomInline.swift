@@ -14,7 +14,7 @@ public class CustomInline: BaseNode {
 
     /// The custom content, if present.
 
-    public private(set) lazy var literal: String? = cmarkNode.literal
+    public private(set) lazy var literalDown: String? = cmarkNode.literalDown
 }
 
 // MARK: - Debug
@@ -22,7 +22,7 @@ public class CustomInline: BaseNode {
 extension CustomInline: CustomDebugStringConvertible {
 
     public var debugDescription: String {
-        return "Custom Inline - \(literal ?? "nil")"
+        return "Custom Inline - \(literalDown ?? "nil")"
     }
 
 }
